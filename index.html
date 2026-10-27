@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CampusLaunch — Discover hackathons, build real-world skills, follow your first-year tech roadmap, and find learning resources. Built for students at Newton School of Technology, Pune." />
+  <meta name="keywords" content="hackathons india, first year student guide, newton school of technology, learn coding, devfolio, unstop hackathons, ai ml resources, web development beginner" />
+  <meta property="og:title" content="CampusLaunch — Your First Year. Your Biggest Opportunities." />
+  <meta property="og:description" content="Discover hackathons, build real-world skills, find resources, and get ahead in college." />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>CampusLaunch 🚀 — First-Year Student Success Platform | Newton School of Technology</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Background Layers -->
+<div class="bg-noise" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="orb orb-1" aria-hidden="true"></div>
+<div class="orb orb-2" aria-hidden="true"></div>
+<div class="orb orb-3" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════════════ -->
+<nav id="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <!-- Logo -->
+    <div class="nav-logo" role="banner">
+      <div class="logo-icon" aria-hidden="true">🚀</div>
+      <span class="logo-text">CampusLaunch</span>
+    </div>
+
+    <!-- Desktop Links -->
+    <div class="nav-links" role="menubar">
+      <button class="nav-link active" data-page="home" role="menuitem" aria-label="Home dashboard">🏠 Home</button>
+      <button class="nav-link" data-page="hackathons" role="menuitem" aria-label="Discover hackathons">⚡ Hackathons</button>
+      <button class="nav-link" data-page="roadmap" role="menuitem" aria-label="First-year learning roadmap">🗺️ Roadmap</button>
+      <button class="nav-link" data-page="resources" role="menuitem" aria-label="Learning resource library">📚 Resources</button>
+      <button class="nav-link" data-page="weekly" role="menuitem" aria-label="Weekly action plan">✅ My Plan</button>
+      <button class="nav-link" data-page="toolkit" role="menuitem" aria-label="Hackathon preparation toolkit">🛠️ Toolkit</button>
+      <button class="nav-link" data-page="community" role="menuitem" aria-label="Community and opportunities">🌐 Community</button>
+      <button class="nav-link" data-page="saved" role="menuitem" aria-label="Saved items">🔖 Saved</button>
+    </div>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="nav-search" id="nav-search-btn" aria-label="Open global search (Ctrl+K)">
+        <span>🔍</span> Search…
+        <kbd aria-label="Keyboard shortcut">⌘K</kbd>
+      </button>
+      <button id="theme-toggle" aria-label="Toggle dark/light mode">☀️</button>
+      <button class="btn-nav-cta" onclick="navigateTo('hackathons')" aria-label="Get started">Get Started</button>
+      <button class="nav-hamburger" id="hamburger-btn" aria-label="Toggle mobile navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobile-nav" role="menu" aria-label="Mobile navigation">
+  <button class="nav-link" data-page="home" role="menuitem">🏠 Home</button>
+  <button class="nav-link" data-page="hackathons" role="menuitem">⚡ Hackathons</button>
+  <button class="nav-link" data-page="roadmap" role="menuitem">🗺️ Roadmap</button>
+  <button class="nav-link" data-page="resources" role="menuitem">📚 Resources</button>
+  <button class="nav-link" data-page="weekly" role="menuitem">✅ My Plan</button>
+  <button class="nav-link" data-page="toolkit" role="menuitem">🛠️ Toolkit</button>
+  <button class="nav-link" data-page="community" role="menuitem">🌐 Community</button>
+  <button class="nav-link" data-page="saved" role="menuitem">🔖 Saved</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════════════════════════════ -->
+<main id="app-root">
+
+  <!-- ──────────────────────── HOME ──────────────────────────── -->
+  <section id="page-home" class="page-section active" aria-labelledby="hero-heading">
+    <!-- Hero -->
+    <div id="hero">
+      <div class="hero-container">
+        <div class="hero-badge" aria-label="Newton School of Technology, Pune — Live platform">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Newton School of Technology, Pune · Built by Shreya Sahi
+        </div>
+
+        <h1 class="hero-title" id="hero-heading">
+          Your First Year.<br />
+          <span class="gradient-text">Your Biggest Opportunities.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Discover hackathons, build real-world skills, find verified learning resources,
+          and get ahead in your first year of tech — all in one place.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" onclick="navigateTo('hackathons')" id="hero-cta-hackathons">
+            ⚡ Explore Hackathons
+          </button>
+          <button class="btn btn-secondary btn-lg" onclick="navigateTo('roadmap')" id="hero-cta-roadmap">
+            🗺️ Start Your First-Year Journey
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value">8+</div>
+            <div class="stat-label">Verified Hackathons</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">15+</div>
+            <div class="stat-label">Free Learning Resources</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">4</div>
+            <div class="stat-label">Roadmap Stages</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">20+</div>
+            <div class="stat-label">Roadmap Tasks</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard Strip -->
+    <div class="dashboard-strip">
+      <div class="dashboard-strip-grid stagger" id="dashboard-strip-content">
+        <!-- Rendered by JS -->
+        <div class="card skeleton" style="height:110px;"></div>
+        <div class="card skeleton" style="height:110px;"></div>
+        <div class="card skeleton" style="height:110px;"></div>
+      </div>
+    </div>
+
+    <!-- Upcoming Hackathons Section -->
+    <div class="section-container">
+      <div class="divider divider-gradient"></div>
+
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:var(--space-6);flex-wrap:wrap;gap:12px;">
+        <div class="section-header" style="margin-bottom:0;">
+          <div class="section-eyebrow">⚡ Upcoming Opportunities</div>
+          <h2 class="section-title">Hackathons Closing Soon</h2>
+          <p class="section-subtitle">Verified opportunities for first-year builders. Always confirm details on official portals.</p>
+        </div>
+        <button class="btn btn-secondary" onclick="navigateTo('hackathons')" id="view-all-hackathons">View All →</button>
+      </div>
+
+      <div class="data-notice" role="alert">
+        <span class="notice-icon" aria-hidden="true">📋</span>
+        <span><strong>Demo Data Notice:</strong> These listings are structured sample data showing the platform's capabilities. Always verify deadlines, prizes, and registration links directly on the official organizer websites (Devfolio, Unstop, SIH, etc.) before registering.</span>
+      </div>
+
+      <div id="home-hackathon-preview">
+        <div class="hackathon-grid stagger">
+          <div class="hackathon-card skeleton" style="height:350px;"></div>
+          <div class="hackathon-card skeleton" style="height:350px;"></div>
+          <div class="hackathon-card skeleton" style="height:350px;"></div>
+        </div>
+      </div>
+
+      <div class="divider divider-gradient" style="margin-top:var(--space-12);"></div>
+
+      <!-- Recent Resources Preview -->
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:var(--space-6);flex-wrap:wrap;gap:12px;">
+        <div class="section-header" style="margin-bottom:0;">
+          <div class="section-eyebrow">📚 Curated Resources</div>
+          <h2 class="section-title">Start Learning Today</h2>
+          <p class="section-subtitle">Handpicked free resources from Harvard, MIT, Google, and open-source communities.</p>
+        </div>
+        <button class="btn btn-secondary" onclick="navigateTo('resources')" id="view-all-resources">Browse All →</button>
+      </div>
+
+      <div id="home-resources-preview">
+        <div class="resource-grid stagger">
+          <div class="resource-card skeleton" style="height:220px;"></div>
+          <div class="resource-card skeleton" style="height:220px;"></div>
+          <div class="resource-card skeleton" style="height:220px;"></div>
+        </div>
+      </div>
+
+      <!-- Quick Links Section -->
+      <div class="divider divider-gradient" style="margin-top:var(--space-12);"></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-4);margin-top:var(--space-8);">
+        <div class="card" style="cursor:pointer;text-align:center;padding:var(--space-6);" onclick="navigateTo('roadmap')">
+          <div style="font-size:2rem;margin-bottom:var(--space-3);">🗺️</div>
+          <div style="font-weight:700;margin-bottom:6px;">First-Year Roadmap</div>
+          <div style="font-size:0.82rem;color:var(--text-tertiary);">4 stages, 20+ tasks with resources, exercises, and progress tracking.</div>
+        </div>
+        <div class="card" style="cursor:pointer;text-align:center;padding:var(--space-6);" onclick="navigateTo('weekly')">
+          <div style="font-size:2rem;margin-bottom:var(--space-3);">✅</div>
+          <div style="font-weight:700;margin-bottom:6px;">Your Next 7 Days</div>
+          <div style="font-size:0.82rem;color:var(--text-tertiary);">Personalized weekly plan generated from a short 5-question onboarding quiz.</div>
+        </div>
+        <div class="card" style="cursor:pointer;text-align:center;padding:var(--space-6);" onclick="navigateTo('toolkit')">
+          <div style="font-size:2rem;margin-bottom:var(--space-3);">🛠️</div>
+          <div style="font-weight:700;margin-bottom:6px;">Hackathon Toolkit</div>
+          <div style="font-size:0.82rem;color:var(--text-tertiary);">Beginner guides, pitch templates, team formation checklists, and more.</div>
+        </div>
+        <div class="card" style="cursor:pointer;text-align:center;padding:var(--space-6);" onclick="navigateTo('community')">
+          <div style="font-size:2rem;margin-bottom:var(--space-3);">🌐</div>
+          <div style="font-weight:700;margin-bottom:6px;">Community & Events</div>
+          <div style="font-size:0.82rem;color:var(--text-tertiary);">Workshops, open-source programs, team discovery, and campus events.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────── HACKATHONS ────────────────────── -->
+  <section id="page-hackathons" class="page-section" aria-labelledby="hackathons-heading">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-eyebrow">⚡ Hackathon Discovery Hub</div>
+        <h1 class="section-title" id="hackathons-heading">Find Your Next Hackathon</h1>
+        <p class="section-subtitle">Verified opportunities across India and online. Filter by format, domain, and deadline to find the perfect fit.</p>
+      </div>
+
+      <div class="data-notice" role="alert">
+        <span class="notice-icon" aria-hidden="true">📋</span>
+        <span><strong>Demo Data:</strong> Sample listings only. Real data integration requires authorized API access (Devfolio, Unstop, MLH). Always verify on official websites before registering. <strong>Last reviewed: October 2026.</strong></span>
+      </div>
+
+      <!-- Filters -->
+      <div class="filters-bar" role="search" aria-label="Hackathon filters">
+        <div class="search-input-wrap">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input type="search" class="search-input" id="hack-search" placeholder="Search hackathons by name, organizer, or domain…" aria-label="Search hackathons"
+            oninput="AppState.hackFilters.search=this.value;renderHackathons()" />
+        </div>
+
+        <div style="display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;">
+          <span style="font-size:0.78rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Format:</span>
+          <div class="filter-chips" role="group" aria-label="Format filter">
+            <button class="filter-chip active" data-filter="format" data-value="all" onclick="setFilter('format','all',this)" id="filter-format-all">All</button>
+            <button class="filter-chip" data-filter="format" data-value="Online" onclick="setFilter('format','Online',this)" id="filter-format-online">🌐 Online</button>
+            <button class="filter-chip" data-filter="format" data-value="In-Person" onclick="setFilter('format','In-Person',this)" id="filter-format-inperson">📍 In-Person</button>
+            <button class="filter-chip" data-filter="format" data-value="Hybrid" onclick="setFilter('format','Hybrid',this)" id="filter-format-hybrid">🔄 Hybrid</button>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;">
+          <span style="font-size:0.78rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Domain:</span>
+          <div class="filter-chips" role="group" aria-label="Domain filter">
+            <button class="filter-chip active" data-filter="domain" data-value="all" onclick="setFilter('domain','all',this)" id="filter-domain-all">All</button>
+            <button class="filter-chip" data-filter="domain" data-value="AI/ML" onclick="setFilter('domain','AI',this)" id="filter-domain-ai">🤖 AI/ML</button>
+            <button class="filter-chip" data-filter="domain" data-value="Web" onclick="setFilter('domain','Web',this)" id="filter-domain-web">🌐 Web Dev</button>
+            <button class="filter-chip" data-filter="domain" data-value="App" onclick="setFilter('domain','App',this)" id="filter-domain-app">📱 App Dev</button>
+            <button class="filter-chip" data-filter="domain" data-value="Cybersecurity" onclick="setFilter('domain','Cybersecurity',this)" id="filter-domain-cyber">🔒 Cyber</button>
+            <button class="filter-chip" data-filter="domain" data-value="Open" onclick="setFilter('domain','Open',this)" id="filter-domain-open">🌟 Open</button>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;">
+          <span style="font-size:0.78rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Level:</span>
+          <div class="filter-chips" role="group" aria-label="Level filter">
+            <button class="filter-chip active" data-filter="level" data-value="all" onclick="setFilter('level','all',this)" id="filter-level-all">All</button>
+            <button class="filter-chip" data-filter="level" data-value="beginner" onclick="setFilter('level','beginner',this)" id="filter-level-beginner">🌱 Beginner Only</button>
+          </div>
+          <div style="margin-left:auto;display:flex;align-items:center;gap:8px;">
+            <span style="font-size:0.78rem;color:var(--text-muted);">Sort:</span>
+            <select class="sort-select" id="hack-sort" onchange="AppState.hackFilters.sort=this.value;renderHackathons()" aria-label="Sort hackathons by">
+              <option value="deadline">Registration Deadline</option>
+              <option value="date">Event Date</option>
+              <option value="name">Name A→Z</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-5);">
+        <span id="hackathon-count" style="font-size:0.85rem;color:var(--text-muted);">Loading…</span>
+        <button class="btn btn-ghost btn-sm" onclick="resetHackathonFilters()" id="reset-hack-filters">Reset Filters</button>
+      </div>
+
+      <div id="hackathon-list" aria-live="polite" aria-label="Hackathon listings">
+        <div class="hackathon-grid stagger">
+          <div class="hackathon-card skeleton" style="height:380px;"></div>
+          <div class="hackathon-card skeleton" style="height:380px;"></div>
+          <div class="hackathon-card skeleton" style="height:380px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────── ROADMAP ──────────────────────── -->
+  <section id="page-roadmap" class="page-section" aria-labelledby="roadmap-heading">
+    <div class="section-container">
+      <div style="display:flex;align-items:flex-start;gap:var(--space-8);flex-wrap:wrap;margin-bottom:var(--space-8);">
+        <div class="section-header" style="margin-bottom:0;flex:1;">
+          <div class="section-eyebrow">🗺️ First-Year Success Roadmap</div>
+          <h1 class="section-title" id="roadmap-heading">Your First-Year Roadmap</h1>
+          <p class="section-subtitle">A structured, 4-stage learning path for first-year CS students. Click each stage to expand tasks and track your progress.</p>
+        </div>
+        <!-- Progress Ring -->
+        <div style="flex-shrink:0;">
+          <div class="card" style="padding:var(--space-5);text-align:center;min-width:180px;">
+            <svg width="120" height="120" class="progress-ring" aria-hidden="true">
+              <defs>
+                <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#7c3aed"/>
+                  <stop offset="100%" stop-color="#c084fc"/>
+                </linearGradient>
+              </defs>
+              <circle class="progress-ring-track" cx="60" cy="60" r="54"/>
+              <circle class="progress-ring-fill" id="progress-ring-fill" cx="60" cy="60" r="54" stroke-dasharray="339.3" stroke-dashoffset="339.3"/>
+            </svg>
+            <div id="progress-ring-text" style="margin-top:-70px;margin-bottom:50px;font-size:1.5rem;font-weight:800;background:var(--brand-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">0%</div>
+            <div style="font-size:0.78rem;color:var(--text-muted);">Overall Progress</div>
+            <div id="roadmap-overall-pct" style="font-size:1.2rem;font-weight:800;margin-top:4px;background:var(--brand-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">0%</div>
+            <div style="height:6px;background:var(--bg-secondary);border-radius:3px;margin-top:8px;overflow:hidden;">
+              <div id="roadmap-overall-bar" style="height:100%;background:var(--brand-gradient);border-radius:3px;width:0%;transition:width 0.5s ease;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="roadmap-container" aria-live="polite">
+        <div class="skeleton" style="height:80px;border-radius:14px;margin-bottom:16px;"></div>
+        <div class="skeleton" style="height:80px;border-radius:14px;margin-bottom:16px;"></div>
+        <div class="skeleton" style="height:80px;border-radius:14px;margin-bottom:16px;"></div>
+        <div class="skeleton" style="height:80px;border-radius:14px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────── RESOURCES ─────────────────────── -->
+  <section id="page-resources" class="page-section" aria-labelledby="resources-heading">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-eyebrow">📚 Learning Resource Library</div>
+        <h1 class="section-title" id="resources-heading">Free Learning Resources</h1>
+        <p class="section-subtitle">Handpicked free resources from Harvard, MIT, Google, Mozilla, and trusted open-source educators. Click 🏷️ to bookmark.</p>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="category-nav" role="group" aria-label="Resource categories">
+        <button class="cat-btn active" id="cat-all" onclick="setResourceCategory('all',this)">All Resources</button>
+        <button class="cat-btn" id="cat-python" onclick="setResourceCategory('Python',this)">🐍 Python</button>
+        <button class="cat-btn" id="cat-js" onclick="setResourceCategory('JavaScript',this)">⚡ JavaScript</button>
+        <button class="cat-btn" id="cat-web" onclick="setResourceCategory('Web Development',this)">🌐 Web Dev</button>
+        <button class="cat-btn" id="cat-dsa" onclick="setResourceCategory('Data Structures',this)">🧮 DSA</button>
+        <button class="cat-btn" id="cat-git" onclick="setResourceCategory('Git',this)">🐙 Git & GitHub</button>
+        <button class="cat-btn" id="cat-ai" onclick="setResourceCategory('AI',this)">🤖 AI / ML</button>
+        <button class="cat-btn" id="cat-math" onclick="setResourceCategory('Math',this)">📐 Math for CS</button>
+        <button class="cat-btn" id="cat-hack" onclick="setResourceCategory('Hackathon',this)">⚡ Hackathon Prep</button>
+        <button class="cat-btn" id="cat-resume" onclick="setResourceCategory('Resume',this)">📄 Resume & Career</button>
+      </div>
+
+      <!-- Search -->
+      <div class="search-input-wrap" style="margin-bottom:var(--space-5);">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input type="search" class="search-input" id="res-search" placeholder="Search resources by title, category, or topic…" aria-label="Search resources"
+          oninput="AppState.resourceFilters.search=this.value;renderResources()" />
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-5);">
+        <span id="resource-count" style="font-size:0.85rem;color:var(--text-muted);">Loading…</span>
+      </div>
+
+      <div id="resource-list" aria-live="polite" aria-label="Learning resources">
+        <div class="resource-grid stagger">
+          <div class="resource-card skeleton" style="height:220px;"></div>
+          <div class="resource-card skeleton" style="height:220px;"></div>
+          <div class="resource-card skeleton" style="height:220px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────── WEEKLY PLAN ───────────────────────── -->
+  <section id="page-weekly" class="page-section" aria-labelledby="weekly-heading">
+    <div class="section-container">
+      <div id="weekly-content" aria-live="polite">
+        <div class="empty-state">
+          <div class="empty-icon">✅</div>
+          <div class="empty-title">Loading your plan…</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────── TOOLKIT ──────────────────────── -->
+  <section id="page-toolkit" class="page-section" aria-labelledby="toolkit-heading">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-eyebrow">🛠️ Hackathon Preparation Toolkit</div>
+        <h1 class="section-title" id="toolkit-heading">Your Hackathon Toolkit</h1>
+        <p class="section-subtitle">Everything you need to go from zero to confident hackathon participant — guides, checklists, templates, and pitch frameworks.</p>
+      </div>
+
+      <!-- Your First Hackathon Feature Card -->
+      <div class="card" style="background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(168,85,247,0.06));border-color:var(--border-brand);padding:var(--space-8);margin-bottom:var(--space-8);display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap;">
+        <div style="font-size:3rem;">🎉</div>
+        <div style="flex:1;">
+          <div class="section-eyebrow" style="margin-bottom:var(--space-2);">For First-Timers</div>
+          <h2 style="font-size:1.3rem;font-weight:800;margin-bottom:var(--space-2);">Your First Hackathon — A Beginner's Survival Guide</h2>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.65;">Never been to a hackathon? That's perfectly fine. Read this before you register for your first one. We'll cover everything from what to pack, how to talk to mentors, what to do at midnight when your code breaks, and how to give a 3-minute demo that judges remember.</p>
+        </div>
+        <button class="btn btn-primary" onclick="openGuideModal('guide-how-it-works')" id="first-hackathon-guide-btn">Read Guide →</button>
+      </div>
+
+      <!-- Guides Grid -->
+      <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:var(--space-5);">📖 Essential Guides</h2>
+      <div id="toolkit-guides"></div>
+
+      <!-- Worksheets -->
+      <h2 style="font-size:1.1rem;font-weight:700;margin-top:var(--space-10);margin-bottom:var(--space-5);">📝 Templates & Worksheets</h2>
+      <div id="toolkit-worksheets"></div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────── COMMUNITY ─────────────────────── -->
+  <section id="page-community" class="page-section" aria-labelledby="community-heading">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-eyebrow">🌐 Community & Opportunities</div>
+        <h1 class="section-title" id="community-heading">Events, Programs & Community</h1>
+        <p class="section-subtitle">Workshops, open-source programs, team collaboration boards, coding contests, and student developer communities.</p>
+      </div>
+
+      <div class="data-notice" role="alert">
+        <span class="notice-icon" aria-hidden="true">📋</span>
+        <span><strong>Verified Listings Only:</strong> All community opportunities are manually reviewed. Submitted opportunities remain unpublished until approved. <strong>Never share private contact details in submissions.</strong></span>
+      </div>
+
+      <div id="community-list" aria-live="polite">
+        <div class="opp-grid stagger">
+          <div class="opp-card skeleton" style="height:240px;"></div>
+          <div class="opp-card skeleton" style="height:240px;"></div>
+          <div class="opp-card skeleton" style="height:240px;"></div>
+        </div>
+      </div>
+
+      <!-- Submit Form -->
+      <div id="submit-opportunity" class="divider divider-gradient" style="margin-top:var(--space-12);"></div>
+      <div style="max-width:640px;margin:var(--space-8) auto 0;">
+        <h2 style="font-size:1.2rem;font-weight:800;margin-bottom:var(--space-2);">📤 Submit an Opportunity</h2>
+        <p style="font-size:0.85rem;color:var(--text-tertiary);margin-bottom:var(--space-6);">Know about a hackathon, workshop, or student program? Submit it for review. All submissions are manually verified before publishing.</p>
+
+        <div id="submit-success" class="hidden" style="padding:var(--space-5);background:var(--green-bg);border:1px solid rgba(34,197,94,0.25);border-radius:var(--radius-lg);margin-bottom:var(--space-5);">
+          <div style="font-size:1rem;font-weight:700;color:var(--green);margin-bottom:4px;">✅ Submission received!</div>
+          <p style="font-size:0.85rem;color:var(--text-secondary);">Thank you for contributing. Our team will review and verify this opportunity within 48 hours before it's published.</p>
+        </div>
+
+        <form id="submit-opportunity-form" class="card" style="padding:var(--space-6);" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="sub-title">Opportunity Title <span style="color:var(--red);">*</span></label>
+            <input type="text" id="sub-title" name="title" class="form-input" placeholder="e.g., Google ML Bootcamp 2026" required maxlength="120" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sub-organizer">Organizer <span style="color:var(--red);">*</span></label>
+            <input type="text" id="sub-organizer" name="organizer" class="form-input" placeholder="e.g., Google Developers India" required maxlength="100" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sub-category">Category</label>
+            <select id="sub-category" name="category" class="form-select">
+              <option value="">Select category…</option>
+              <option>Technical Workshop</option>
+              <option>Hackathon</option>
+              <option>Coding Competition</option>
+              <option>Open-Source Program</option>
+              <option>Internship / Program</option>
+              <option>Campus Tech Event</option>
+              <option>Project Collaboration</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sub-link">Official Website / Registration Link</label>
+            <input type="url" id="sub-link" name="link" class="form-input" placeholder="https://…" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sub-description">Description <span style="color:var(--red);">*</span></label>
+            <textarea id="sub-description" name="description" class="form-textarea" placeholder="Brief description of the opportunity, eligibility, and why students should apply…" required maxlength="500"></textarea>
+            <div class="form-hint">Max 500 characters. Do not include private phone numbers or personal contact details.</div>
+          </div>
+          <button type="submit" class="btn btn-primary w-full" id="submit-opp-btn" style="justify-content:center;">📤 Submit for Review</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────── SAVED ────────────────────────── -->
+  <section id="page-saved" class="page-section" aria-labelledby="saved-heading">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-eyebrow">🔖 Your Saved Items</div>
+        <h1 class="section-title" id="saved-heading">Saved & Bookmarked</h1>
+        <p class="section-subtitle">All your saved hackathons and bookmarked resources in one place.</p>
+      </div>
+
+      <h2 style="font-size:1rem;font-weight:700;margin-bottom:var(--space-4);">⚡ Saved Hackathons</h2>
+      <div id="saved-hackathons" aria-live="polite">
+        <div class="empty-state">
+          <div class="empty-icon">🔖</div>
+          <div class="empty-title">No saved hackathons yet</div>
+          <button class="btn btn-primary btn-sm" onclick="navigateTo('hackathons')">🚀 Discover Hackathons</button>
+        </div>
+      </div>
+
+      <div class="divider divider-gradient" style="margin:var(--space-10) 0;"></div>
+
+      <h2 style="font-size:1rem;font-weight:700;margin-bottom:var(--space-4);">📚 Bookmarked Resources</h2>
+      <div id="saved-resources" aria-live="polite">
+        <div class="empty-state">
+          <div class="empty-icon">📚</div>
+          <div class="empty-title">No bookmarked resources yet</div>
+          <button class="btn btn-primary btn-sm" onclick="navigateTo('resources')">📖 Browse Resources</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span style="width:28px;height:28px;background:var(--brand-gradient);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;">🚀</span>
+          <span style="background:var(--brand-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">CampusLaunch</span>
+        </div>
+        <p class="footer-tagline">Built by Shreya Sahi, First-Year CS Student at Newton School of Technology, Pune. Empowering every fresher to discover opportunities, build skills, and ship their first project.</p>
+        <div style="display:flex;gap:8px;margin-top:16px;">
+          <span class="badge badge-demo">📋 Sample Data</span>
+          <span class="badge badge-verified">✓ Open Source</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <span class="footer-link" onclick="navigateTo('hackathons')">⚡ Hackathon Hub</span>
+          <span class="footer-link" onclick="navigateTo('roadmap')">🗺️ Roadmap</span>
+          <span class="footer-link" onclick="navigateTo('resources')">📚 Resources</span>
+          <span class="footer-link" onclick="navigateTo('weekly')">✅ Weekly Plan</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Tools</div>
+        <div class="footer-links">
+          <span class="footer-link" onclick="navigateTo('toolkit')">🛠️ Toolkit</span>
+          <span class="footer-link" onclick="navigateTo('community')">🌐 Community</span>
+          <span class="footer-link" onclick="navigateTo('saved')">🔖 Saved Items</span>
+          <span class="footer-link" onclick="openSearch()">🔍 Search</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <div class="footer-links">
+          <a class="footer-link" href="https://devfolio.co" target="_blank" rel="noopener">Devfolio</a>
+          <a class="footer-link" href="https://unstop.com" target="_blank" rel="noopener">Unstop</a>
+          <a class="footer-link" href="https://mlh.io" target="_blank" rel="noopener">MLH</a>
+          <a class="footer-link" href="https://github.com/education" target="_blank" rel="noopener">GitHub Student</a>
+          <a class="footer-link" href="https://www.sih.gov.in" target="_blank" rel="noopener">SIH Official</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="notice">
+        <span>📋</span>
+        <span>All hackathon listings are <strong>sample demo data</strong>. CampusLaunch does not scrape or violate any terms of service. Verify all opportunities on official portals.</span>
+      </div>
+      <div>Made with ❤️ in Pune · © 2026 Shreya Sahi · CampusLaunch v1.0</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MODALS
+════════════════════════════════════════════════════════════════ -->
+<!-- Hackathon Detail Modal -->
+<div class="modal-overlay" id="hackathon-modal" role="dialog" aria-modal="true" aria-label="Hackathon details">
+  <div class="modal" id="hackathon-modal-content"></div>
+</div>
+
+<!-- Guide Modal -->
+<div class="modal-overlay" id="guide-modal" role="dialog" aria-modal="true" aria-label="Hackathon guide">
+  <div class="modal" id="guide-modal-content"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     GLOBAL SEARCH OVERLAY
+════════════════════════════════════════════════════════════════ -->
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Global search">
+  <div class="search-box">
+    <div style="display:flex;align-items:center;padding:0 16px;border-bottom:1px solid var(--border-subtle);">
+      <span style="font-size:1.1rem;margin-right:12px;color:var(--text-muted);" aria-hidden="true">🔍</span>
+      <input type="search" id="global-search-input" placeholder="Search hackathons, resources, roadmap tasks…" aria-label="Global search input" autocomplete="off" />
+      <button onclick="closeSearch()" style="background:none;border:none;color:var(--text-muted);font-size:0.85rem;cursor:pointer;padding:4px 8px;border-radius:6px;flex-shrink:0;" aria-label="Close search">ESC</button>
+    </div>
+    <div id="global-search-results" role="listbox" aria-label="Search results"></div>
+    <div style="padding:10px 16px;font-size:0.72rem;color:var(--text-muted);border-top:1px solid var(--border-subtle);display:flex;gap:16px;">
+      <span>↑↓ Navigate</span><span>↵ Select</span><span>ESC Close</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TOAST CONTAINER
+════════════════════════════════════════════════════════════════ -->
+<div id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════════════════════ -->
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/render.js"></script>
+
+<!-- Inline filter helpers (small enough to inline) -->
+<script>
+  function setFilter(key, value, btn) {
+    AppState.hackFilters[key] = value;
+    document.querySelectorAll(`.filter-chip[data-filter="${key}"]`).forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    renderHackathons();
+  }
+
+  function setResourceCategory(category, btn) {
+    AppState.resourceFilters.category = category;
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderResources();
+  }
+</script>
+</body>
+</html>
