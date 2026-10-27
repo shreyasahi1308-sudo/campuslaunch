@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 CampusLaunch
 
 **Your Ultimate First-Year Student Success Platform**  
@@ -178,3 +179,6 @@ Your site will be live at `your-project.vercel.app` within 60 seconds.
 ## 📄 License
 
 MIT License — Free to use, fork, and build upon. Created by Shreya Sahi.
+=======
+# campuslaunch
+>>>>>>> b608484504580c50b11b4f3c75597cbf2ef3bc88
